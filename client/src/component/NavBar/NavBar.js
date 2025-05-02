@@ -2,32 +2,33 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './NavBar.module.scss';
+import routes from '~/configs';
 
 const cx = classNames.bind(styles);
 
 const navs = [
   {
-    to: '/home',
+    to: routes.home,
     title: 'Home',
   },
   {
-    to: '/about',
+    to: routes.about,
     title: 'About',
   },
   {
-    to: '/team',
+    to: routes.team,
     title: 'Team',
   },
   {
-    to: '/practice-area',
+    to: routes.practiceArea,
     title: 'Practice area',
   },
   {
-    to: '/case',
+    to: routes.Case,
     title: 'Case',
   },
   {
-    to: '/contact',
+    to: routes.Contact,
     title: 'Contact',
   },
 ];

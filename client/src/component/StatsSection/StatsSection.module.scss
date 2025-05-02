@@ -1,0 +1,45 @@
+/* Define root font size */
+:root {
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+  
+  .container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem 1.6rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .statNumber {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #0f1f1f;
+  }
+  
+  .highlight {
+    color: #c9aa6f;
+  }
+  
+  .text {
+    margin-top: 0.8rem;
+    color: #4a5568; /* Gray 600 */
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  
