@@ -1,0 +1,56 @@
+.homepage {
+  max-width: 100vw;
+  // width: 1200px;
+  margin: 0 auto;
+  // margin: 0 auto;
+  // padding: 10px 20px;
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  background-color: var(--content-bg-color);
+
+}
+
+
+.posts{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+// see more link 
+
+
+.see-more {
+  position: relative;
+  display: inline-flex;
+  color: #21a1f1;
+  font-weight: bold;
+  text-decoration: none;
+  overflow: hidden;
+  margin-top: 0;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, #21a1f1, transparent);
+    animation: moveLine 1s linear infinite;
+  }
+  &:hover{
+    transform: scale(1.01);
+  }
+}
+
+
+
+@keyframes moveLine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+:root {
+  
+}
+
+* {
+  font-family: Inter;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  color: var(--text-color);
+  overflow-y: overlay;
+  background-color: var(--bgr-color);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: var(--text-color);
+}
+
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(93, 93, 93, 0.468);
+}
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(93, 93, 93, 0.08);
+}
+
+
+@media (max-width: 480px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    scrollbar-width: none;
+  }
+}
