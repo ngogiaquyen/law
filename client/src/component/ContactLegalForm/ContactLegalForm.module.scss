@@ -1,0 +1,135 @@
+.container {
+    background-color: #0c1d1c;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12rem;
+    max-width: 112rem;
+    width: 100%;
+  
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .infoSection {
+    color: white;
+    max-width: 60rem;
+    margin: 0 auto;
+  
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+  }
+  
+  .heading {
+    font-size: 5rem;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+  }
+  
+  .subheading {
+    color: #b7b7b7;
+    font-family: sans-serif;
+    margin-bottom: 12rem;
+  }
+  
+  .contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .iconBox {
+    background-color: #2a3a3a;
+    padding: 3rem;
+    border-radius: 0.8rem;
+  
+    i {
+      color: #d4a24a;
+      font-size: 1.6rem;
+    }
+  }
+  
+  .label {
+    font-size: 1.2rem;
+    color: #9ca3af;
+    margin-bottom: 1rem;
+  }
+  
+  .text {
+    font-size: 1.4rem;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+  
+  .form {
+    background-color: white;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 8rem;
+  }
+  
+  .labelTitle {
+    display: block;
+    font-size: 2rem;
+    font-family: serif;
+    margin-bottom: 2rem;
+  }
+  
+  .input,
+  .textarea {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    padding: 3rem;
+    margin-bottom: 6rem;
+    color: #9ca3af;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+  
+    &::placeholder {
+      color: #9ca3af;
+    }
+  
+    &:focus {
+      outline: none;
+      border-color: #d4a24a;
+      box-shadow: 0 0 0 2px #d4a24a;
+    }
+  }
+  
+  .textarea {
+    resize: none;
+  }
+  
+  .button {
+    width: 100%;
+    background-color: #d4a24a;
+    color: white;
+    padding: 3rem;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #b38a3a;
+    }
+  }
+  
