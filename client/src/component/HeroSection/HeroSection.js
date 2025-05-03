@@ -1,12 +1,12 @@
 import classNames from "classnames/bind";
 import styles from "./HeroSection.module.scss";
+import images from "~/assets/images";
 
 const cx = classNames.bind(styles);
 
 function HeroSection() {
   return (
     <div className={cx("wrapper")}>
-      <main className={cx("main")}>
         <section className={cx("textSection")}>
           <h1 className={cx("heading")}>
             A Lawyer Dedicated
@@ -40,21 +40,20 @@ function HeroSection() {
               />
             </div>
             <div className={cx("clientStats")}>
-              <span className={cx("clientCount")}>13k</span>
+              <span className={cx("clientCount")}>13<span>k</span></span>
               <span className={cx("plus")}>+</span>
               <div className={cx("clientLabel")}>Satisfied clients</div>
             </div>
           </div>
         </section>
-        <section className={cx("imageSection")}>
+        <div className={cx("imageSection")}>
           <img
-            src="https://storage.googleapis.com/a1aa/image/88f544c0-e8b1-4d1b-d07d-4a2a42faeadd.jpg"
+            src={images.herorImg}
             alt="Lawyer"
           />
-        </section>
-      </main>
+        </div>
 
-      <div className={cx("chatIcon")}>
+      {/* <div className={cx("chatIcon")}>
         <img
           src="https://storage.googleapis.com/a1aa/image/f35c91c0-9238-4fff-2a06-016ac77441de.jpg"
           alt="Messenger icon"
@@ -63,7 +62,7 @@ function HeroSection() {
 
       <button className={cx("scrollTop")}>
         <i className="fas fa-angle-up"></i>
-      </button>
+      </button> */}
     </div>
   );
 }

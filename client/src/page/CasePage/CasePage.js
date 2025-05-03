@@ -6,7 +6,6 @@ const cx = classNames.bind(styles);
 function CasePage() {
   return (
     <div className={cx('wrapper')}>
-        CasePage
     </div>
   );
 }

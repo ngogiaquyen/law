@@ -1,180 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap');
+
+/* Base styles */
 .wrapper {
-    font-family: 'Roboto', sans-serif;
-    background-color: #0f1a1a;
-    color: #e5e7eb;
+  font-family: 'Roboto', sans-serif;
+  background-color: #0f1a1a;
+  height: 120vh;
+  padding: 0 70px;
+  max-width: 128rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  padding-bottom: 180px;
+}
+
+.heading {
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 6rem;
+}
+
+.description {
+  text-align: left;
+  color: #d1d5db;
+  font-size: 1.6rem;
+  margin-bottom: 50px;
+  max-width: 48rem;
+}
+
+.consultationBtn {
+  background-color: #d4aa5f;
+  color: #000;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 18px 37px;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #b38a3f;
+  }
+}
+
+.clientInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  gap: 1.6rem;
+}
+
+.avatars {
+  display: flex;
+  margin-right: 1rem;
+
+  img {
+    width: 46px;
+    height: 46px;
+    border-radius: 9999px;
+    border: 2px solid #0f1a1a;
+    margin-left: -1.2rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.clientStats {
+  color: #d1d5db;
+  font-size: 1.4rem;
+}
+
+.clientCount {
+  color: #fff;
+  // font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  font-weight: 500;
+  font-family: 'Cormorant Garamond', serif;
+  span {
+    font-family: 'Cormorant Garamond', serif;
     position: relative;
-    min-height: 100vh;
-    overflow-y: scroll;
+    top: -4px;
+    font-size: 3.4rem;
   }
-  
-  .font-playfair {
-    font-family: 'Playfair Display', serif;
+}
+
+.plus {
+  color: #d4aa5f;
+  font-weight: 600;
+}
+
+.clientLabel {
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+.imageSection {
+  height: 100%;
+  position: relative; /* cần thiết nếu dùng absolute bên trong */
+  overflow: visible;
+  display: flex;
+  align-items: flex-end;
+}
+
+.imageSection img {
+  width: 106%;
+  height: 98%; /* ảnh lớn hơn thẻ cha */
+  // margin-left: ;   /* dịch sang trái để tràn ra */
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+.chatIcon {
+  position: fixed;
+  bottom: 6rem;
+  left: 6rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 9999px;
+  background-color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 2.4rem;
+    height: 2.4rem;
   }
-  
-  .main {
-    max-width: 128rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 0 8rem;
-    align-items: center;
-    justify-content: space-between;
-  
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
-  }
-  
-  .textSection {
-    margin-top: 20rem;
-    max-width: 64rem;
-  
-    @media (min-width: 768px) {
-      margin-top: 32rem;
-      max-width: 48rem;
-    }
-  
-    @media (min-width: 1024px) {
-      max-width: 64rem;
-    }
-  }
-  
-  .heading {
-    font-family: 'Playfair Display', serif;
-    color: #fff;
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 6rem;
-  
-    @media (min-width: 768px) {
-      font-size: 5rem;
-    }
-  }
-  
-  .description {
-    color: #d1d5db;
-    font-size: 1.4rem;
-    margin-bottom: 8rem;
-    max-width: 48rem;
-  
-    @media (min-width: 768px) {
-      font-size: 1.6rem;
-    }
-  }
-  
-  .consultationBtn {
-    background-color: #d4aa5f;
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 6rem;
+  right: 6rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+
+  i {
     color: #000;
-    font-weight: 600;
-    font-size: 1.4rem;
-    padding: 1.2rem 3.2rem;
-    border-radius: 0.4rem;
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: #b38a3f;
-    }
   }
-  
-  .clientInfo {
-    display: flex;
-    align-items: center;
-    margin-top: 16rem;
-    gap: 1.6rem;
+}
+
+/* === Media Queries (max-width) === */
+@media (max-width: 1023px) {
+  .textSection {
+    max-width: 48rem;
   }
-  
-  .avatars {
-    display: flex;
-    margin-right: 1rem;
-  
-    img {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 9999px;
-      border: 2px solid #0f1a1a;
-      margin-left: -1.2rem;
-  
-      &:first-child {
-        margin-left: 0;
-      }
-    }
+}
+
+@media (max-width: 767px) {
+  .main {
+    flex-direction: column;
   }
-  
-  .clientStats {
-    color: #d1d5db;
+
+  .textSection {
+    margin-top: 10rem;
+    max-width: 64rem;
+  }
+
+  .heading {
+    font-size: 4rem;
+  }
+
+  .description {
     font-size: 1.4rem;
   }
-  
-  .clientCount {
-    color: #fff;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-  }
-  
-  .plus {
-    color: #d4aa5f;
-    font-weight: 600;
-  }
-  
-  .clientLabel {
-    font-size: 1.2rem;
-    margin-top: 0.4rem;
-  }
-  
+
   .imageSection {
     margin-top: 16rem;
-  
-    @media (min-width: 768px) {
-      margin-top: 0;
-      margin-left: 12rem;
-      flex-shrink: 0;
-    }
-  
-    img {
-      width: 100%;
-      max-width: 48rem;
-      border-radius: 0.8rem;
-    }
+    margin-left: 0;
   }
-  
-  .chatIcon {
-    position: fixed;
-    bottom: 6rem;
-    left: 6rem;
-    width: 4.8rem;
-    height: 4.8rem;
-    border-radius: 9999px;
-    background-color: #2563eb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  
-    img {
-      width: 2.4rem;
-      height: 2.4rem;
-    }
-  }
-  
-  .scrollTop {
-    position: fixed;
-    bottom: 6rem;
-    right: 6rem;
-    width: 4rem;
-    height: 4rem;
-    background-color: #fff;
-    border-radius: 0.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
-  
-    i {
-      color: #000;
-    }
-  }
-  
+}
