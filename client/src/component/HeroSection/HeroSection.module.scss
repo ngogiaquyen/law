@@ -4,6 +4,8 @@
 .wrapper {
   font-family: 'Roboto', sans-serif;
   background-color: #0f1a1a;
+}
+.content{
   height: 120vh;
   padding: 0 70px;
   max-width: 128rem;
@@ -13,6 +15,7 @@
   align-items: flex-end;
   justify-content: space-between;
   margin: 0 auto;
+
 }
 
 .font-playfair {
@@ -84,31 +87,43 @@
 }
 
 .clientStats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   color: #d1d5db;
   font-size: 1.4rem;
 }
 
 .clientCount {
+  display: flex;
   color: #fff;
   // font-family: 'Playfair Display', serif;
   font-size: 3.4rem;
   font-weight: 500;
   font-family: 'Cormorant Garamond', serif;
-  span {
-    font-family: 'Cormorant Garamond', serif;
+  & > span {
     position: relative;
-    top: -4px;
+    top: 2px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .k{
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 3.4rem;
     font-size: 3.4rem;
   }
 }
 
 .plus {
+  line-height: 3.4rem;
   color: #d4aa5f;
-  font-weight: 600;
+  font-weight: 300;
+  font-size: 2.8rem;
 }
 
 .clientLabel {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   margin-top: 0.4rem;
 }
 

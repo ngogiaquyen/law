@@ -1,109 +1,113 @@
 /* Define root font size */
 :root {
-    font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+.container {
+  background-color: #0d1c1b;
+  color: white;
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 0 100px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 4.8rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  font-family: 'Merriweather', serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  padding: 2rem 1.6rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .container {
-    background-color: #0d1c1b;
-    color: white;
-    position: relative;
-    min-height: 100vh;
+}
+
+.item {
+  padding: 2rem;
+  border-bottom: 1px solid #1f2a29;
+  border-right: 1px solid #1f2a29;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  &:last-child {
+    border-right: none;
   }
-  
-  .title {
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
+
+  & .icon {
+    color: rgb(223, 174, 79);
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+
+  & .heading {
     font-family: 'Merriweather', serif;
+    font-size: 3.4rem;
+    color: white;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
   }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-    padding: 2rem 1.6rem;
-  
-    @media (min-width: 640px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
+
+  & .description {
+    font-size: 1.8rem;
+    text-align: start;
+    color: rgb(203, 203, 203);
+    margin-bottom: 1rem;
   }
-  
-  .item {
-    padding: 2rem;
-    border-bottom: 1px solid #1f2a29;
-    border-right: 1px solid #1f2a29;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  
-    &:last-child {
-      border-right: none;
-    }
-  
-    & .icon {
-      color: #a67c3a;
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      opacity: 0.3;
-    }
-  
-    & .heading {
-      font-family: 'Merriweather', serif;
-      font-size: 1.6rem;
-      color: white;
-      margin-bottom: 0.8rem;
-      font-weight: 600;
-    }
-  
-    & .description {
-      font-size: 1.4rem;
-      color: #d9d9d9;
-      margin-bottom: 1rem;
-    }
-  
-    & .link {
-      color: #a67c3a;
-      font-weight: 600;
-      font-size: 1.4rem;
-    }
+
+  & .link {
+    color: #a67c3a;
+    font-weight: 600;
+    font-size: 1.4rem;
   }
-  
-  .scrollButton {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    background-color: white;
-    padding: 0.4rem;
-    border-radius: 50%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-  
-    &:hover {
-      background-color: #e2e8f0;
-    }
-  
-    & .scrollIcon {
-      color: #0d1c1b;
-    }
+}
+
+.scrollButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: white;
+  padding: 0.4rem;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #e2e8f0;
   }
-  
-  .messengerButton {
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    background-color: #3b82f6;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  & .scrollIcon {
+    color: #0d1c1b;
   }
-  
-  .messengerIcon {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-  
+}
+
+.messengerButton {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.messengerIcon {
+  width: 1.6rem;
+  height: 1.6rem;
+}

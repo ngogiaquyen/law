@@ -1,27 +1,27 @@
-import classNames from "classnames/bind";
-import styles from "./HeroSection.module.scss";
-import images from "~/assets/images";
+import classNames from 'classnames/bind';
+import styles from './HeroSection.module.scss';
+import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
 function HeroSection() {
   return (
-    <div className={cx("wrapper")}>
-        <section className={cx("textSection")}>
-          <h1 className={cx("heading")}>
+    <div className={cx('wrapper')}>
+      <div className={cx('content')}>
+        <section className={cx('textSection')}>
+          <h1 className={cx('heading')}>
             A Lawyer Dedicated
             <br />
             to Protecting The
             <br />
             Rights of All
           </h1>
-          <p className={cx("description")}>
-            Experienced and knowledgeable lawyer offering top notch legal
-            representation and advocacy services.
+          <p className={cx('description')}>
+            Experienced and knowledgeable lawyer offering top notch legal representation and advocacy services.
           </p>
-          <button className={cx("consultationBtn")}>Schedule Consultation</button>
-          <div className={cx("clientInfo")}>
-            <div className={cx("avatars")}>
+          <button className={cx('consultationBtn')}>Schedule Consultation</button>
+          <div className={cx('clientInfo')}>
+            <div className={cx('avatars')}>
               <img
                 src="https://storage.googleapis.com/a1aa/image/eee94214-4ecf-46d2-9115-7210e19003ef.jpg"
                 alt="Client 1"
@@ -39,19 +39,21 @@ function HeroSection() {
                 alt="Client 4"
               />
             </div>
-            <div className={cx("clientStats")}>
-              <span className={cx("clientCount")}>13<span>k</span></span>
-              <span className={cx("plus")}>+</span>
-              <div className={cx("clientLabel")}>Satisfied clients</div>
+            <div className={cx('clientStats')}>
+              <span className={cx('clientCount')}>
+                13
+                <span>
+                  <span className={cx("k")}>k</span> <span className={cx('plus')}>+</span>
+                </span>
+              </span>
+              <div className={cx('clientLabel')}>Satisfied clients</div>
             </div>
           </div>
         </section>
-        <div className={cx("imageSection")}>
-          <img
-            src={images.herorImg}
-            alt="Lawyer"
-          />
+        <div className={cx('imageSection')}>
+          <img src={images.herorImg} alt="Lawyer" />
         </div>
+      </div>
 
       {/* <div className={cx("chatIcon")}>
         <img
