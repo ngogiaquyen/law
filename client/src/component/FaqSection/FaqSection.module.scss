@@ -1,68 +1,76 @@
 :root {
-    font-size: 10px; // 1rem = 10px
+  font-size: 10px; // 1rem = 10px
+}
+
+.container {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 16rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  // justify-content: center;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 4.8rem;
+  margin-bottom: 64px;
+  text-align: center;
+  align-self: center;
+}
+
+.faqItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 60rem;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 3rem;
+  margin-bottom: 6rem;
+
+  &.active {
+    border-color: #d9a15a;
   }
-  
-  .container {
-    background-color: #ffffff;
-    min-height: 100vh;
-    padding: 16rem 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+}
+
+.faqButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 2.6rem;
+  color: #1a1a1a;
+  font-weight: normal;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.icon {
+  font-size: 1.6rem;
+
+  &.open {
+    color: #d9a15a;
   }
-  
-  .title {
-    font-size: 3rem;
-    margin-bottom: 12rem;
-    text-align: center;
+
+  &:not(.open) {
+    color: #d1d5db;
   }
-  
-  .faqItem {
-    width: 100%;
-    max-width: 60rem;
-    border-bottom: 1px solid #d1d5db;
-    padding-bottom: 3rem;
-    margin-bottom: 6rem;
-  
-    &.active {
-      border-color: #d9a15a;
-    }
+}
+
+.faqContent {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  color: #4b5563;
+  text-align: left;
+
+  &.hidden {
+    display: none;
   }
-  
-  .faqButton {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.6rem;
-    color: #1a1a1a;
-    font-weight: normal;
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  .icon {
-    font-size: 1.6rem;
-  
-    &.open {
-      color: #d9a15a;
-    }
-  
-    &:not(.open) {
-      color: #d1d5db;
-    }
-  }
-  
-  .faqContent {
-    margin-top: 3rem;
-    font-size: 1.4rem;
-    color: #4b5563;
-  
-    &.hidden {
-      display: none;
-    }
-  }
-  
+}
