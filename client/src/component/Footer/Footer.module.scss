@@ -4,13 +4,23 @@ $text-color: #d9d9d9;
 $font-serif: 'Merriweather', serif;
 $font-sans: 'Open Sans', sans-serif;
 
-.footer {
+.wrapper {
   background-color: $primary-color;
   color: $text-color;
+  height: 100vh;
+  padding: 60px 0;
+}
+
+.footer-content{
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .container {
-  max-width: 7xl;
+  width: 100%;
   margin: 0 auto;
   padding: 12px 24px;
 }
@@ -28,13 +38,17 @@ $font-sans: 'Open Sans', sans-serif;
 }
 
 .brand {
-  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 500px;
+  width: 100%;
 }
 
 .brand-title {
   font-family: $font-serif;
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 0.1em;
@@ -42,9 +56,9 @@ $font-sans: 'Open Sans', sans-serif;
 
 .brand-description {
   margin-top: 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  max-width: 280px;
+  font-size: 1.8rem;
+  width: 80%;
+  text-align: left;
 }
 
 .newsletter {
@@ -54,7 +68,7 @@ $font-sans: 'Open Sans', sans-serif;
 .newsletter-title {
   font-family: $font-serif;
   color: white;
-  font-size: 1.125rem;
+  font-size: 2.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -89,30 +103,35 @@ $font-sans: 'Open Sans', sans-serif;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  @media (min-width: 640px) {
+  grid-template-columns: repeat(4, 1fr);
+  @media (max-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .column {
   font-family: $font-sans;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .column-title {
   font-family: $font-serif;
   color: white;
-  font-size: 1.125rem;
+  font-size: 2.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .column-list {
+  text-align: left;
   list-style-type: none;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.8rem;
   font-weight: normal;
   color: $text-color;
 }
@@ -128,10 +147,15 @@ $font-sans: 'Open Sans', sans-serif;
   background-color: #2f3a3a;
   padding: 12px;
   border-radius: 50%;
+
+  i{
+    font-size: 1.8rem;
+  }
 }
 
 .contact-details {
-  font-size: 1rem;
+  text-align: left;
+  font-size: 1.8rem;
   font-weight: normal;
 }
 

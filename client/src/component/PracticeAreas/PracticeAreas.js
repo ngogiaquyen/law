@@ -53,21 +53,6 @@ function PracticeAreas() {
           </p>
         </div>
       </div>
-
-      <button
-        aria-label="Scroll to top"
-        className={cx('scrollButton')}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      >
-        <i className={cx('scrollIcon', 'fa-chevron-up')}></i>
-      </button>
-      <button aria-label="Messenger chat" className={cx('messengerButton')}>
-        <img
-          alt="Messenger icon"
-          className={cx('messengerIcon')}
-          src="https://storage.googleapis.com/a1aa/image/f9e817f8-34f9-459a-ed70-632bb34676aa.jpg"
-        />
-      </button>
     </div>
   );
 }
