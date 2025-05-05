@@ -7,10 +7,6 @@ const connection = mysql.createConnection({
   database: process.env.DB_NAME || 'my_api' // Tên cơ sở dữ liệu
 });
 
-console.log(process.env.DB_HOST)
-console.log(process.env.DB_USER)
-console.log(process.env.DB_PASSWORD)
-console.log(process.env.DB_NAME)
 
 connection.connect((err) => {
   if (err) {

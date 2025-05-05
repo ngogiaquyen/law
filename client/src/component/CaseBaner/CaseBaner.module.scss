@@ -1,79 +1,86 @@
 .wrapper {
-    background-color: #071616;
-    font-family: 'Merriweather', serif;
+  background-color: #071616;
+  font-family: 'Merriweather', serif;
+  height: 100vh;
+}
+
+.container{
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 112rem; // 7xl = 1120px if 1rem = 10px
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 6rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
   }
-  
-  .container {
-    max-width: 112rem; // 7xl = 1120px if 1rem = 10px
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem 6rem;
-    display: flex;
-    flex-direction: column;
-  
-    @media (min-width: 768px) {
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
-    align-items: center;
+  align-items: center;
+}
+
+.textSection {
+  color: white;
+  max-width: 60rem; // 600px
+  padding-right: 0;
+
+  @media (min-width: 768px) {
+    padding-right: 20rem;
   }
-  
-  .textSection {
-    color: white;
-    max-width: 60rem; // 600px
-    padding-right: 0;
-  
-    @media (min-width: 768px) {
-      padding-right: 20rem;
-    }
+}
+
+.title {
+  font-size: 6.4rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+.description {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  margin-bottom: 16rem;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: white;
+  gap: 1rem;
+}
+
+.breadcrumbLink {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    text-decoration: underline;
   }
-  
-  .title {
-    font-size: 4rem;
-    font-weight: 400;
-    margin-bottom: 1.6rem;
+}
+
+.separator {
+  color: #7a7a7a;
+}
+
+.imageSection {
+  margin-top: 12rem;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+    flex-shrink: 0;
   }
-  
-  .description {
-    font-size: 1.4rem;
-    line-height: 2.2rem;
-    margin-bottom: 16rem;
-  }
-  
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: white;
-    gap: 1rem;
-  }
-  
-  .breadcrumbLink {
-    text-decoration: none;
-    color: white;
-  
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  
-  .separator {
-    color: #7a7a7a;
-  }
-  
-  .imageSection {
-    margin-top: 12rem;
-  
-    @media (min-width: 768px) {
-      margin-top: 0;
-      flex-shrink: 0;
-    }
-  }
-  
-  .image {
-    width: 40rem;
-    max-width: 100%;
-  }
-  
+}
+
+.image {
+  width: 40rem;
+  max-width: 100%;
+}

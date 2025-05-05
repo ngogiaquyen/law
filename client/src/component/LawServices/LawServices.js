@@ -4,7 +4,7 @@ import styles from "./LawServices.module.scss";
 
 const cx = classNames.bind(styles);
 
-function LawServices() {
+function  LawServices() {
   const services = [
     {
       img: "https://storage.googleapis.com/a1aa/image/ff666d2d-6ba8-453c-7006-af5022150ff0.jpg",
